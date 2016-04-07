@@ -1,0 +1,24 @@
+h2{
+  font-size: 30px;
+  color: rgb(236, 241, 249);
+  border-bottom: 1px solid black;
+}
+.BigTitle{
+  font-weight: bolder;
+}
+p{
+  line-height: 200%
+}
+.firstpart{
+  background-color: rgb(74, 123, 195);
+}
+.describ{
+  width: 50%;
+  float: left;
+  background-color:inherit;
+}
+.content{
+  width: 50%;
+  float: right;
+  background-color: inherit;
+}
