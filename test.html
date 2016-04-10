@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>弹窗</title>
+<style type="text/css">
+body{margin:0;padding:0;}
+#bg{background:#000;position:absolute;left:0;top:0;filter:"Alpha(opacity=20)";opacity:0.2;display:none;}
+#win{width:200px;height:200px;position:absolute;left:50%;top:50%;margin:-100px -100px 0;border:4px #F00 solid;background:#FFF;display:none;}
+</style>
+</head>
+
+<body>
+<a href="javascript:;" onclick="WinTip()">弹出</a>
+<div id="bg"></div>
+<div id="win"><a href="javascript:;" onclick="WinTip()">关闭</a></div>
+</body>
+<script type="application/javascript">
+var $=function(id){return document.getElementById(id);}
+function WinTip(){
+	var win=new WinSize();
+	var Tip=$("bg");
+	Tip.style.width=win.W+"px";
+	Tip.style.height=win.H+"px";
+	if(Tip.style.display=="block"){
+		Tip.style.display="none";
+		$("win").style.display="none";
+		}else{
+				Tip.style.display="block";
+				$("win").style.display="block";
+			}
+	}
+function WinSize() //函数：获取尺寸
+{
+var winWidth = 0;
+var winHeight = 0;
+if (window.innerWidth)
+winWidth = window.innerWidth;
+else if ((document.body) && (document.body.clientWidth))
+winWidth = document.body.clientWidth;
+if (window.innerHeight)
+winHeight = window.innerHeight;
+else if ((document.body) && (document.body.clientHeight))
+winHeight = document.body.clientHeight;
+if (document.documentElement  && document.documentElement.clientHeight && document.documentElement.clientWidth)
+{winHeight = document.documentElement.clientHeight;
+winWidth = document.documentElement.clientWidth;}
+return{"W":winWidth,"H":winHeight}
+}
+</script>
+</html></td>
+	  </tr>
+	</table>

@@ -1,24 +1,98 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.NavBar{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 120px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-right: 1px solid rgb(210, 210, 210);
+  overflow: hidden;
+
+}
+#logo{
+  width: inherit;
+  text-align: center;
+  height: 20%;
+}
+.NavBar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+
+}
+.NavBar li{
+  height: 20%;
+}
+a.NavButton:link{
+  display: block;
+  font-weight:normal;
+  font-family: Arial;
+  background-color:inherit;
+  width:inherit;
+  height:100%;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  color: rgb(91, 91, 91);
+}
+.NavBar img{
+  width: 40%;
+  padding-top: 30%;
+}
+.text{
+  padding-top: 10%;
+}
+a.NavButton:hover{
+  background-color: rgb(255, 0, 0)
+}
+#Main{
+  background-color: rgb(255, 255, 255);
+  margin-left: 150px;
+  padding: 3%;
+
+}
 h2{
   font-size: 30px;
-  color: rgb(236, 241, 249);
-  border-bottom: 1px solid black;
-}
-.BigTitle{
-  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  font-family:Arial;
+  /*border-bottom: 1px solid black;*/
 }
 p{
   line-height: 200%
 }
-.firstpart{
-  background-color: rgb(74, 123, 195);
+.block{
+  /*height: 500px;*/
+
+  background-color:inherit;
+  clear: both;
 }
 .describ{
-  width: 50%;
-  float: left;
+  /*width: 40%;*/
+  /*padding:2%;*/
+  width: 60%;
   background-color:inherit;
+  /*border: 2px solid red;*/
+  float: left;
 }
 .content{
-  width: 50%;
-  float: right;
+  /*width: 40%;*/
+
   background-color: inherit;
+  /*border: 2px solid green;*/
+float: left;
+}
+
+.footer{
+  clear: both;
+}
+#secondpart{
+  /*border: 5px solid yellow;*/
+}
+#firstpart{
+  /*border: 5px solid orange;*/
 }
