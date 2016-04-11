@@ -28,6 +28,7 @@ body{
 .NavBar li{
   height: 20%;
 }
+
 a.NavButton:link{
   display: block;
   font-weight:normal;
@@ -38,18 +39,25 @@ a.NavButton:link{
   text-align: center;
   padding: 4px;
   text-decoration: none;
-  color: rgb(91, 91, 91);
+
+  /*color: rgb(61, 237, 25);*/
+}
+a.NavButton:hover{
+  background-color: rgb(186, 186, 186)
 }
 .NavBar img{
   width: 40%;
-  padding-top: 30%;
+  padding-top: 25%;
+  padding-bottom: 5%;
 }
-.text{
-  padding-top: 10%;
+.TextGray{
+  color: rgb(91, 91, 91);
 }
-a.NavButton:hover{
-  background-color: rgb(255, 0, 0)
+.TextBlack{
+  color: rgb(0, 0, 0);
 }
+
+
 #Main{
   background-color: rgb(255, 255, 255);
   margin-left: 150px;
@@ -86,13 +94,63 @@ p{
   /*border: 2px solid green;*/
 float: left;
 }
-
-.footer{
-  clear: both;
-}
 #secondpart{
   /*border: 5px solid yellow;*/
 }
 #firstpart{
   /*border: 5px solid orange;*/
+}
+#Information img{
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 3%;
+  top: 3%;
+  right: 3%;
+}
+
+#bg{
+  background:#ffffff;
+  position:absolute;
+  left:0;
+  top:0;
+  filter:"Alpha";
+  opacity:0.7;
+  display:none;
+}
+#win{
+  width:22%;
+  height:100%;
+  border-left: 1px solid rgb(210, 210, 210);
+  position:absolute;
+  right:0px;
+  top:0px;
+  margin:0px;
+  background:#ffffff;
+  display:none;
+}
+
+.Menu .MainList{
+  list-style-type: none;
+  padding-top: 30%;
+}
+.Menu .SecondList{
+  list-style-type: none;
+  padding-top: 5%;
+}
+.Menu .MainList a:link{
+  display: block;
+  font-size: 150%;
+  font-weight: bold;
+  font-family: Arial;
+  text-decoration: none;
+  margin-bottom: 10%;
+}
+.Menu .SecondList a:link{
+  display: block;
+  font-size: 100%;
+  font-weight: normal;
+  font-family: Arial;
+  text-decoration: none;
+  margin-bottom: 6%;
 }
