@@ -70,6 +70,9 @@ a.NavButton:hover{
 #NavButtonWork{
   border-right: 5px solid rgb(15, 89, 31);
 }
+#NavButtonAbout{
+  border-right: 5px solid rgb(15, 89, 31);
+}
 #Main{
   overflow: hidden;
   background-color: rgb(255, 255, 255);
@@ -85,6 +88,14 @@ h2{
 }
 p{
   line-height: 200%
+}
+.copyright{
+  float: right;
+  position: relative;
+  top: 50%;
+  right: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 5px;
 }
 .divide{
   width: 50%;
@@ -112,6 +123,8 @@ p{
   height: 30%;
   margin-top: 10%;
 }
+
+/*Here for Map page!!*/
 .map .describ{
   width: 50%;
   float: left;
@@ -121,7 +134,7 @@ p{
 .map .describ p{
   font-size: 150%;
   line-height: 150%;
-  color: rgb(91, 91, 91);
+  color: rgb(126, 126, 126);
 }
 .map .content{
   float: right;
@@ -134,6 +147,9 @@ p{
   width: 100%;
   border: 1px solid rgb(176, 176, 176);
 }
+
+
+/*Here for graph page!*/
 .information{
   text-align: center;
 }
@@ -145,15 +161,18 @@ p{
   margin-right: auto;
 }
 .graphs{
+
   padding-top: 5%;
   width: 40%;
+  height: 30%;
   margin-left: auto;
   margin-right: auto;
 }
 .graph{
+
   width: 200px;
   height: 200px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(149, 203, 158);
   border: 2px solid black;
   margin: 10px;
 }
@@ -162,4 +181,64 @@ p{
 }
 .graph2{
   float: right;
+}
+.blockp{
+  width: 37%;
+  background-color: red;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.A{
+  float: left;
+}
+.B{
+  float: right;
+}
+
+/*Here for work page!!!*/
+.work .describ{
+  padding-left: 5%;
+}
+.work .describ p{
+  color: rgb(139, 139, 139);
+}
+.titles{
+  float: left;
+  width: 30%;
+  height: 70%;
+  border-right: 1px solid black;
+}
+.details{
+  float: right;
+  width: 69%;
+
+  height: inherit;
+}
+em,span{
+  color: rgb(39, 125, 58);
+}
+
+/*Here is the last page!!*/
+.about{
+  background-color: rgb(148, 175, 154);
+  padding-top: 8%;
+  padding-left: 25%;
+}
+.me img{
+float: left;
+  width: 15%;
+  padding-right: 5%;
+  padding-top: 7%;
+
+}
+.about .describ{
+  text-shadow: 5px 5px 8px #656565;
+  float: left;
+  font-size: 120%;
+  color:rgb(255, 255, 255);
+}
+h1{
+  font-size: 200%;
 }
