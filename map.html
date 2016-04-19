@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>Here!</title>
     <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
   </head>
+
+
+
   <body>
     <div class="NavBar">
       <div class="" id="logo">
@@ -20,7 +24,18 @@
     </div>
     <div id="Main">
     <div class="block map" ><!-- When add more then one class,use space to saperate them -->
+      <div class="rectangle">
+        <div class="marker1">
+        </div>
+        <div class="marker2">
+        </div>
+        <div class="marker3">
+        </div>
 
+        <div class="clean">
+
+        </div>
+      </div>
       <div class="describ">
         <h2> Find here your group !</h2>
         <p>
@@ -28,14 +43,49 @@
         Every group has been pined in the map.<br>
         Click pop up bubble for more information.<br>
         :)
-
         </p>
       </div>
-      <div class="content">
-        <img src="pic/mapimage.png" alt="" />
-      </div>
+
+
     </div>
+    <div class="block">
+      <div class="search">
+        <p>
+          testestettes
+        </p>
+      </div>
+      <div  id="map">
+
+      </div>
+
+
+    </div>
+
 </div>
 
+<script>
+var mapOptions = {
+    center: { lat: 48.2, lng: 16.4 },
+    zoom: 10
+};
+var mapEl = document.getElementById('map');
+var map = new google.maps.Map(mapEl, mapOptions);
+
+// You can start working with your map here
+var bounds = new google.maps.LatLngBounds( new google.maps.LatLng(48.1, 16.3), new google.maps.LatLng(48.3, 16.5)
+);
+var rectangle = new google.maps.Rectangle({ strokeColor: '#0000ff',
+strokeWeight: 2,
+fillColor: 'transparent', map: map, bounds: bounds
+});
+
+
+var image = 'pic/marker.png';
+var pos = { lat: 48.196857, lng: 16.370766 }; var marker = new google.maps.Marker({ position: pos, map: map,
+title: "Lecture Room EI5",
+icon: image
+});
+
+</script>
   </body>
 </html>

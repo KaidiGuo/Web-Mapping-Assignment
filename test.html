@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-div.background
-{
-  width: 400px;
-  height: 266px;
-  background: url('pic/p1.jpg') no-repeat;
-  border: 1px solid black;
-}
+  <head>
+    <meta charset="utf-8">
+    <title>Here!</title>
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <script type="application/javascript" src="main.js"> </script>
+  </head>
+  <body>
+    <div class="NavBar">
+      <div class="" id="logo">
+        <a href="index.html"><img src="pic/logo.png" alt="LOGO" /></a>
+      </div>
+      <ul>
+        <li><a href="map.html" class="NavButton"><img src="pic/location.png" alt=""  /><div>Map</div></a></li>
+        <li><a href="information.html" class="NavButton"><img src="pic/battery-1.png" alt="" /><br><div>Graph</div></a></li>
+        <li><a href="work.html" class="NavButton" ><img src="pic/battery-2.png" alt="" /><br><div>Work</div></a></li>
+        <li><a href="about.html" class="NavButton" id="NavButtonAbout"><img src="pic/battery-3.png" alt=""  /><br><div>About</div></a></li>
+      </ul>
 
-div.transbox
-{
-  width: 338px;
-  height: 204px;
-  margin:30px;
-  background-color: #ffffff;
-	color: #000000;
-  border: 1px solid black;
-  /* for IE */
-  filter:alpha(opacity=60);
-  /* CSS3 standard */
-  opacity:0.6;
-}
+    </div>
+    <div id="Main">
+    <div class="block about" ><!-- When add more then one class,use space to saperate them -->
+    <div class="me">
+      <img src="pic/me.png" alt="" />
+    </div>
+      
 
-div.transbox p
-{
-  margin: 30px 40px;
-	font-weight: bolder;
-}
-</style>
-</head>
+    </div>
+    </div>
 
-<body>
-
-<div class="background">
-<div class="transbox">
-<p>
-This is some text that is placed in the transparent box.
-This is some text that is placed in the transparent box.
-This is some text that is placed in the transparent box.
-This is some text that is placed in the transparent box.
-This is some text that is placed in the transparent box.
-</p>
-</div>
-</div>
-
-</body>
+  </body>
 </html>
