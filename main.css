@@ -9,6 +9,7 @@ body{
 }
 .NavBar{
   position:fixed;
+  z-index: 1000;
   left: 0px;
   top: 0px;
   width: 120px;
@@ -179,19 +180,63 @@ p{
   width: 50%;
   float: left;
   padding-left: 8%;
-  padding-top: 15%;
+  padding-top: 8%;
 }
 .map .describ p{
-  font-size: 150%;
+  font-size: 120%;
   line-height: 150%;
   color: rgb(89, 87, 87);
 }
-
-#map{
-    width: 512px;
-    height: 512px;
-border: 2px solid red;
+.go{
+  /*clear: both;*/
+  position: absolute;
+  bottom: 30px;
+  float: left;
+  padding-left: 40%;
 }
+.divide-green{
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background-color: rgb(45, 120, 60);
+}
+.introduction{
+  float: left;
+}
+#map{
+
+    width:100%;
+    height:100%;
+}
+.highlight{
+  position:absolute;;
+  z-index: 100;
+  right: 0px;
+  width: 300px;
+
+  background-color: rgb(255, 255, 255);
+  filter:"Alpha(opacity=80)";
+  opacity:0.8;
+
+}
+.top{
+  font-size: 150%;
+  background-color: rgb(54, 120, 60);
+  color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.highlight p{
+  padding: 5%;
+  font-size: 13px;
+  line-height: 150%;
+  color: rgb(54, 120, 60);
+}
+
 
 /*Here for graph page!*/
 .information{
@@ -243,7 +288,7 @@ border: 2px solid red;
 
 /*Here for work page!!!*/
 .work .describ{
-  padding-left: 5%;
+  /*padding-left: 5%;*/
 }
 .work .describ p{
   color: rgb(139, 139, 139);
@@ -251,18 +296,19 @@ border: 2px solid red;
 .titles{
   float: left;
   width: 30%;
-  height: 70%;
+  height: 900px;
   border-right: 1px solid black;
 }
 .details{
   float: right;
   width: 69%;
-
   height: inherit;
 }
 em,span{
   color: rgb(39, 125, 58);
 }
+
+
 
 /*Here is the last page!!*/
 .about{

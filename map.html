@@ -39,25 +39,44 @@
       <div class="describ">
         <h2> Find here your group !</h2>
         <p>
-        Locate your position.<br>
+        Down there, you will see all the groups in Vienna.<br>
         Every group has been pined in the map.<br>
         Click pop up bubble for more information.<br>
         :)
         </p>
       </div>
+      <div class="go">
+          <a href="#googlemap"><img src="pic/go.png" alt="" /></a>
+      </div>
+      <div class="divide-green">
 
+      </div>
 
     </div>
-    <div class="block">
-      <div class="search">
+    <div class="block" id="googlemap">
+
+      <div class="introduction">
         <p>
-          testestettes
+
         </p>
       </div>
+      <div class="highlight">
+        <div class="top">
+          Information
+        </div>
+        <p>
+          > 3 different marker size have been used, to represent the size of each group.<br><br>
+          > Use 'for' loop and 'if' to choose and add all the markers with the right size accordingly.<br><br>
+          > Anchors have been added for a better user experience.<br><br>
+          > The red circle is also clickble.<br><br>
+          > All the data on this page is faked.<br><br>
+
+        </p>
+      </div>
+
       <div  id="map">
 
       </div>
-
 
     </div>
 
@@ -65,26 +84,76 @@
 
 <script>
 var mapOptions = {
-    center: { lat: 48.2, lng: 16.4 },
-    zoom: 10
+    center: { lat: 48.2, lng: 16.38 },
+    zoom: 13
 };
 var mapEl = document.getElementById('map');
 var map = new google.maps.Map(mapEl, mapOptions);
 
 // You can start working with your map here
-var bounds = new google.maps.LatLngBounds( new google.maps.LatLng(48.1, 16.3), new google.maps.LatLng(48.3, 16.5)
+var bounds = new google.maps.LatLngBounds( new google.maps.LatLng(48.228089, 16.350241), new google.maps.LatLng(48.171348, 16.414546)
 );
-var rectangle = new google.maps.Rectangle({ strokeColor: '#0000ff',
-strokeWeight: 2,
-fillColor: 'transparent', map: map, bounds: bounds
+var rectangle = new google.maps.Rectangle({ strokeColor:'rgb(45, 120, 60)',strokeWeight: 2,fillColor: 'transparent', map: map, bounds: bounds
 });
 
+var targetCircle = new google.maps.Circle({
+      strokeColor: '#f41710',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map,
+      center: { lat:48.179869,   lng: 16.308801 } ,
+      radius: 500
+    });
+    var infowindow2 = new google.maps.InfoWindow(
+      { content: "<span style='font-size:15px;color:green'>Most populor destination." });
+      targetCircle.addListener('click', function() {
+      infowindow2.setPosition(targetCircle.getCenter());
+      infowindow2.open(map);
+    });
+ // var cityCircle = new google.maps.Circle(sunCircle);
 
-var image = 'pic/marker.png';
-var pos = { lat: 48.196857, lng: 16.370766 }; var marker = new google.maps.Marker({ position: pos, map: map,
-title: "Lecture Room EI5",
-icon: image
-});
+var image = 'pic/marker40.png';
+var middleimage = 'pic/marker80.png';
+var largimage = 'pic/marker.png';
+var clubs =[
+  {name:"The green python hiking club",pos:{lat:48.196857,lng:16.370766},address:"DreamStreet45",discrib:"A quite professional team.",level:1,member:15},
+  {name:"Weekend relaxing",pos:{lat:48.209223,lng:16.366598},address:"DreamStreet45",discrib:"Just enjoy your life.",level:1,member:28},
+  {name:"Through the mountain",pos:{lat:48.193399,lng:16.385150},address:"DreamStreet45",discrib:"We Like mountains! Do you?",level:1,member:35},
+  {name:"Vienna youngth",pos:{lat:48.203007,lng:16.362632},address:"DreamStreet45",discrib:"We are a group of young and interesting people.",level:2,member:123},
+  {name:"Vienna bicycle club",pos:{lat:48.178269,lng:16.363084},address:"DreamStreet45",discrib:"Join us if you have a bicycle!",level:2,member:211},
+  {name:"Vienna student travel club",pos:{lat:48.184163,lng:16.401622},address:"DreamStreet45",discrib:"Join us if you have a bicycle!",level:3,member:350}];
+
+for(i=0; i<clubs.length;i++){
+  if (clubs[i].member-100<0) {
+    icon = image;
+  }
+  else if (clubs[i].member-200<0) {
+    icon = middleimage;
+  }
+  else {
+    icon = largimage;
+  }
+  var marker = new google.maps.Marker({ position: clubs[i].pos , map: map,
+  title: clubs[i].name,
+  icon: icon
+  });
+  showinfomessage(marker,i);
+}
+
+
+
+// 48.203007, 16.362632   48.178269, 16.363084
+function showinfomessage(marker,number)
+    {
+    var infowindow = new google.maps.InfoWindow(
+      { content: "<span style='font-size:20px;color:green'>" +clubs[i].name +"</span><br>"+"<span style='font-size:12px;color:gray'>" +clubs[i].discrib +"</span><br><br>"+"<span style='font-size:12px;color:black'>Total member: " +clubs[i].member +"</span><br>"+"<span style='font-size:10px;color:black'>Address: "+clubs[i].address});
+
+      marker.addListener('click', function() {
+      infowindow.open(map, marker);
+      });
+    }
 
 </script>
   </body>
