@@ -126,17 +126,18 @@ var clubs =[
   {name:"Vienna student travel club",pos:{lat:48.184163,lng:16.401622},address:"DreamStreet45",discrib:"Join us if you have a bicycle!",level:3,member:350}];
 
 for(i=0; i<clubs.length;i++){
-  if (clubs[i].member-100<0) {
+  var club = clubs[i];
+  if (club.member<100) {
     icon = image;
   }
-  else if (clubs[i].member-200<0) {
+  else if (100<club.member && club.member<200) {
     icon = middleimage;
   }
   else {
     icon = largimage;
   }
-  var marker = new google.maps.Marker({ position: clubs[i].pos , map: map,
-  title: clubs[i].name,
+  var marker = new google.maps.Marker({ position: club.pos , map: map,
+  title: club.name,
   icon: icon
   });
   showinfomessage(marker,i);

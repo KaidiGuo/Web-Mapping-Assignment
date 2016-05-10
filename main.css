@@ -285,6 +285,34 @@ p{
 .B{
   float: right;
 }
+.pathmap{
+  width: 900px;
+  height: 900px;
+  background-image: url(pic/pathmap.jpg);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.labels{
+  display:block;
+  color:"#FF7733";
+  font-weight: bold;
+}
+.peaks{
+  display:block;
+}
+
+#myway polyline:hover{
+    stroke-width: 8;
+    stroke:#FF6633;
+    font-weight: bold;
+}
+path:hover{
+    stroke-width: 8;
+    stroke:blue;
+}
+
+
 
 /*Here for work page!!!*/
 .work .describ{
